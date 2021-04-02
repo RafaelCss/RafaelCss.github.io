@@ -1,14 +1,98 @@
 
 @import url('https://fonts.googleapis.com/css2? family = Josefin + Sans: wght @ 200 & display = swap');
-@import url(" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" );
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css");
+@import url(" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" );/*usar ícones awesome*/
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css");/*usar bootstrap*/
 
 *{/*para toda a pagina*/
 margin: 0;
 padding: 0;
+list-style: none;/*tirar marcações de lista*/
+text-decoration: none;/*tirar sublinhados de indicação de links*/
 
 }
 
+.hamburguer{/*criação do menu hambuguer na mão */
+
+  /*  background-color: red;/*cor de fundo*/
+    width: 2rem; /*largura*/
+    height: 2rem;/*altura*/
+    position: fixed;/*posição fixada*/
+    z-index: 100;/*define posição dos objetos*/
+    right: 2rem;/*borda direita*/
+    top: 2rem;/*altura em relação ao topo*/
+    display: flex; /**/
+    flex-direction: column;/*direção do display*/
+    justify-content:space-evenly ;/*espalhar os elementos*/
+    cursor: pointer;
+    }
+
+    .show-menu .hamburguer{
+        right: 17rem;
+
+    }
+
+.line{/*criação do menu hambuguer na mão */
+
+width: 100%;
+height: .1rem;
+background-color: white;
+box-shadow: 0.1rem 0.1rem 1px #000; /*define sombra da caixa*/
+transition: transform 1s;
+
+}
+/* animação do menu hamburguer virando um X */
+.show-menu #line1{
+
+transform: rotate(45deg) translate(.3rem, .4rem );
+
+}
+/* animação do menu hamburguer virando um X */
+.show-menu #line2{
+/*some a linha do meio*/
+opacity: 0;
+visibility: hidden;
+    
+}
+/* animação do menu hamburguer virando um X */
+.show-menu #line3{
+
+transform: rotate(-45deg) translate(.2rem, -.4rem );
+    
+}
+
+.hamburguer span{ /*sinalização do X DO MENU HAMBURGUER*/
+
+position:absolute;
+left: 3rem;
+height: 2rem;
+width: 6rem;
+display: flex;
+justify-content: center;/*CENTRALIZA O TEXTO na vertical*/
+align-items: center;/*centraliza o texto na horizontal*/
+background-color: #df39e2;
+color: azure;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+opacity: 0;
+
+
+}
+
+.hamburguer span::before{
+
+content: '';/*sem conteudo*/
+position: absolute;
+/*crinado um triangulo com css */
+border-right: .5rem solid #df39e2;/*alterando a borda da direita*/
+border-top: .5rem solid transparent;/*borda de cima*/
+border-left: .5rem solid transparent;/*borda esquerda*/
+border-bottom: .5rem solid transparent;/*de baixo*/
+left: -.9rem;
+}
+
+.show-menu .hamburguer:hover span{ /*quando clicar o spam aparece antes fica invisel*/
+
+    opacity: 1;
+}
 
 header{/*configurações do cabeçalho*/
 width:100% ;/*tamanho do cabeçalho*/
@@ -58,7 +142,7 @@ left: 15%;/*borda esquerda*/
 
 .banner h1{ /*dentro do banner h1*/
 color: azure;/*cor da fonte*/
-font-size: 4.5rem; /*tamanho da fonte*/
+font-size: 3.5rem; /*tamanho da fonte*/
 font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 font-weight: 200;/*grossura da fonte*/
 text-shadow: .4rem .5rem 2px rgba(0,0,0, 4);/*sombra da fonte e posição dela*/
@@ -118,4 +202,76 @@ opacity: 0;
         opacity: 1;
     }
     
+    }
+
+    .sidebar{/*menu*/
+        width: 20rem;
+        height: 100%;
+        background-color: #ffff;
+        position: fixed;
+        top: 0;
+        right: -20rem; /*inicialmente fora da tela*/
+        transition: all 1s;/*animação de entrada pelo lado de 1s*/
+
+    }
+    
+    .menu{ /*centralizando a div do menu*/
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50% , -50%);/*ajuda a centralizar*/
+        
+    }
+
+
+    .show-menu .sidebar{ /*menu feito junto com javascript*/
+        right: 0;
+
+    }
+
+    .menu-item{/*centralizando os item do menu*/
+
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    .menu-link{ /*tamanhos  e cores da fonts*/
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 2rem;
+        color: rgb(102, 98, 98);
+        transition: color 1s; /* faz com que a cor demore 1s para mudar*/
+    }
+
+    .menu-link:hover{ /*encostou muda a cor */
+
+        color: #d53ad8;
+    }
+
+    .social-midias{
+    
+        position: absolute;
+        bottom: 2rem;/*altura em relação a borda inferior*/
+        width: 100%;
+        display: flex;/**/
+        justify-content: space-around;/*espaçamento entre elementos*/
+
+    }
+
+    .social-midias i{
+     
+        color: #555;
+        height: 2.5rem;
+        width: 2.5rem;
+        font-size: 1.5rem;/*aumenta o tamanho do ícone sendo que ele é representado como fonte */
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        display: flex;
+        transition: color 1s;
+
+    }
+
+    .social-midias i:hover{ /*encostou muda a cor e aumenta o tamanho*/
+
+        color: #df39e2;
     }
