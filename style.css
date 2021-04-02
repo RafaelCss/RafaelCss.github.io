@@ -1,3 +1,121 @@
 
 @import url('https://fonts.googleapis.com/css2? family = Josefin + Sans: wght @ 200 & display = swap');
 @import url(" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" );
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css");
+
+*{/*para toda a pagina*/
+margin: 0;
+padding: 0;
+
+}
+
+
+header{/*configurações do cabeçalho*/
+width:100% ;/*tamanho do cabeçalho*/
+height: 100vh;/*altura do cabeçalho*/
+overflow: hidden;/*evitar rolamento*/
+position: relative;
+
+}
+
+.image-wraper{/*configurações da div do cabeçalho*/
+
+width: 100%;/*largura da div */
+height:100% ;/*altura da div*/
+overflow: hidden;/*evitar rolamento*/
+background-color:rgba(0, 0, 0, 1)/*cor de fundo*/
+
+}
+
+.image-wraper img{ /*configurações da imagem do cabeçalho*/
+
+    width: 100%; /* largura da imagem*/
+    height:100% ;/*altura em relação a div*/
+    object-fit: cover; /*não espremer imagem*/
+    opacity: 0.5;/*deixar imagem mais clara*/
+   animation: zoom 25s; /* define os parâmetros como nome da função keyframe e tempo delay entre outras */
+}
+
+@keyframes zoom { /*criar animação de zoom para imagem de fundo*/
+    0% {
+        transform: scale(1.3);
+    }
+
+    100%{
+
+        transform: scale(1);
+    }
+
+
+}
+
+.banner{/*texto do header*/
+position: absolute;/*posição do texto*/
+top: 30%;/*borda superior*/
+left: 15%;/*borda esquerda*/
+
+}
+
+.banner h1{ /*dentro do banner h1*/
+color: azure;/*cor da fonte*/
+font-size: 4.5rem; /*tamanho da fonte*/
+font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+font-weight: 200;/*grossura da fonte*/
+text-shadow: .4rem .5rem 2px rgba(0,0,0, 4);/*sombra da fonte e posição dela*/
+line-height: 1.3;/*altura da linha*/
+margin-bottom: 2rem; /* espaçamento entre paragrafo*/
+animation: movebanner 1s 0.5s forwards; /*nome da função ,tempo de duração, atraso*/
+opacity: 0;
+
+}
+
+
+.banner p{/*paragrafo dentro do banner*/
+
+    color: azure;/*cor da fonte*/
+    font-size: 1.5rem; /*tamanho da fonte*/
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 50;/*grossura da fonte*/
+    text-shadow: .2rem .2rem 2px rgba(0,0,0, 4);/*sombra da fonte e posição dela*/
+    line-height: 1.3;/*altura da linha*/
+    margin-bottom: 2rem; /* espaçamento entre paragrafo*/
+    animation: movebanner 1s 0.7s forwards; /*nome da função ,tempo de duração, atraso*/
+    opacity: 0;
+}
+
+.banner button{/* botão dentro de banner*/
+
+font-family: 'muli',serif;
+color: rgb(248, 248, 248);/*cor da letra*/
+background: #fc00ff;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #00dbde, #fc00ff);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #00dbde, #fc00ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+/*cor de fundo site top https://uigradients.com/#Timber*/
+/*
+padding-left: 2;conforme a borda da esquerda
+padding-top: 1;espaço conforme a borda de cima
+padding-bottom: 2;espaço conforme a borda de baixo
+padding-right: 2; espaço borda da direita*
+pode ser usado a forma abaixo::>.
+*/
+cursor: pointer;/*tipo de cursor quando encostar*/
+padding: 1rem 2rem;/*lados espaçamento */
+border: none;/*sem bordas*/
+text-transform:uppercase; /*deixar as letra maiuculas ou somente as inicias /*/
+letter-spacing: .2rem; /*espaços entre letras*/
+border-radius: 5px; /*arrendondar bordas*/
+animation: movebanner 1s 0.9s forwards; /*nome da função ,tempo de duração, atraso*/
+opacity: 0;
+}
+
+@keyframes movebanner{ /*movimentação das palavras da div banner*/
+    0%{
+    transform: translateY(10rem) rotateY(-30deg); /*descer  e girar  */
+    opacity: 0;
+    }
+    100%{
+        transform: translateY(0rem) rotateY(0deg);/*volta ao começo*/
+        opacity: 1;
+    }
+    
+    }
