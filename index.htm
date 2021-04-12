@@ -226,10 +226,10 @@
       <div class="orcamento-wrapper">
         <h1>Faça um Orçamento</h1>
         
-        <form >
+        <form id="forms-orc">
           <label for="quantidade">Quantidade de Paginas:</label>
-            <input type="number" name="quantidade" id="quantidade">
-            <label for="js">Preciso de um Script em JavaScript!</label>
+            <input type="number" name="quantidade" id="qtde" min="1">
+            <label for="js">Preciso de um Script, em JavaScript!</label>
             <input type="checkbox" name="js" id="js">
             <label for="layot">Layout:</label>
             <div class="group-layout">
@@ -238,14 +238,17 @@
                 <label for="layout-sim">Preciso de um Layout</label>
               </div>
               <div>
-                <input type="radio" name="layot" id="layot-nao">
+                <input type="radio" name="layot" id="layot-nao" checked>
                 <label for="layot-nao">Já tenho um Layout!</label>
               </div>
             </div>
 
-            <label for="prazo">Prazo?</label>  
-            <input type="range" name="prazo" id="prazo">
-            <button type="submit">Enviar</button>
+            <label for="prazo" id='pr'>Prazo:</label>  
+            <input type="range" name="prazo" id="prazo" min="1" max="10" checked='0'>
+            <button type="submit" id="btn">Enviar</button>
+            <div class="total">
+              <label for="total" id="total" > Preço R$ 0,00</label>
+            </div>
 
         </form>
 
@@ -291,7 +294,6 @@
   <i class="fas fa-arrow-up"></i>
 </a>
   </div>
-
 
 </body>
 <script src="/index.js"></script>
