@@ -10,6 +10,9 @@ list-style: none;/*tirar marcações de lista*/
 text-decoration: none;/*tirar sublinhados de indicação de links*/
 
 }
+html{
+    scroll-behavior: smooth;/*suaviza a barra de rolagem para subir ou descer com links*/
+}
 
 .hamburguer{/*criação do menu hambuguer na mão */
 
@@ -415,10 +418,11 @@ opacity: 0;
 
     .card-img-wrapper{
         
-        width: 100%;
-        height: 100%;
+        width: 90%;
+        height: 90%;
         background-color:rgba(27, 27, 27, 0.877);
         border-radius: 0.5rem;
+        margin-left: 1rem;
     }
 
     .card-img-wrapper img{
@@ -687,3 +691,60 @@ font-weight: bolder;
 
 
 }
+
+footer{
+width: 100%;
+height: 7rem;
+background-color:#17181b;
+display: flex;
+justify-content: center;
+align-items: center;
+
+
+}
+
+.footer-content{
+    width: 60%;
+    display: flex;
+    justify-content:space-between;
+}
+.footer-content p{
+    color:#a7a7a7;
+    font-size: 1rem;
+}
+
+.social-list a{
+color:#a7a7a7;
+margin: 1rem;
+font-size: 1.3rem;
+
+}
+.social-list ul{
+    display: flex;
+}
+
+#link-lopo{
+position: fixed;
+right: 3rem;
+bottom: 3rem;
+width: 5rem;
+height: 5rem;
+background: #f953c6;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #b91d73, #f953c6);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #b91d73, #f953c6); 
+display: flex;
+justify-content: center;
+align-items: center;
+color: #eee;
+border-radius: 50px;
+box-shadow: 0 0.1rem 0.6rem #000000 ;
+    
+}
+
+
+
+
+
+
+
+
