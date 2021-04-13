@@ -48,7 +48,21 @@ total.innerHTML = `Preço: R$ ${preco.toFixed(2).replace('.' ,',')} ` //toFixed 
 
 
 
+var forms = document.querySelectorAll('#forms-orc [name]')
+var btn = document.querySelector('.btn-submit')
+var info = {}
 
+btn.addEventListener('click', e=>{
+
+forms.forEach((campo, index) =>{
+
+info[campo.name] = campo.value
+
+
+})
+console.log(info)
+e.preventDefault()
+})
 
 
 

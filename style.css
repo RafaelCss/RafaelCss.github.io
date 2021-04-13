@@ -748,4 +748,11 @@ box-shadow: 0 0.1rem 0.6rem #000000 ;
 
 
 
+ @media  (max-width){
+
+    html{
+
+        font-size: 50%;
+    }
      
+ }    
